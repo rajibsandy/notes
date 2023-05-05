@@ -13,7 +13,16 @@ DATABASES = {
     }
 }
 ```
+- Save and Close settings.py file
+- Open Terminal
+- Activate Your virtual Env
+- Create requirements.txt File
 
+  ```pip freeze > requirements.txt```
+  
+- Deactivate Virtual Env
+
+- Push your Poject to You Github Account as Private Repo.To Access Remote Server via SSH
 
 
 
