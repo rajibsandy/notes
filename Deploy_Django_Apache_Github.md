@@ -36,6 +36,39 @@ sudo apt install git -y
   python -c "import sqlite3; print(sqlite3.sqlite_version)"
   
 ```
+- Install virtualenv
+
+```
+pip list
+sudo pip install virtualenv
+sudo service apache2 status
+
+```
+
+- Make Connection between vpsr &  Github------ via SSH Key
+- Generate SSH Keys
+
+```ssh-keygen -t ed25519 -C "your_email@example.com"```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 - On Local Windows Machine, Goto Your Project Folder then follow below instruction:
