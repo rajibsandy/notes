@@ -26,16 +26,10 @@ apache2ctl -M
 pip --version
 git --version
 
-
-- python -c "import sqlite3; print(sqlite3.sqlite_version)"
+- SQLite is Included with Python
+  python -c "import sqlite3; print(sqlite3.sqlite_version)"
   
 ```
-
-
-
-
-
-
 
 
 - On Local Windows Machine, Goto Your Project Folder then follow below instruction:
