@@ -1,6 +1,12 @@
 
-
+# VPS 
 - For Oracal Cloud please use iptables
+
+
+```
+ssh ubuntu@140.238.241.74
+```
+
 
 ```
 $ sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT
