@@ -290,17 +290,19 @@ touch wsgi.py
 
 ### Special Tip: If you face error "Name duplicates previous WSGI daemon definition" while installing SSL Certificate for your domain then comment below code then try to install SSL Certificate again and after successful installation un-comment it
 
-```cd /etc/apache2/sites-available/your_domain.conf
+```
+cd /etc/apache2/sites-available/your_domain.conf
 
 #WSGIDaemonProcess any_name python-home=/var/www/project_folder_name/myprojectenv python-path=/var/www/project_folder_name
 #WSGIProcessGroup any_name
 #WSGIScriptAlias /  /var/www/project_folder_name/inner_project_folder_name/wsgi.py
+
+```
+
 A ssl config file will generate. Remember both ssl and non-ssl files can not have same WSGIDaemonProcess and WSGIProcessGroup name (mentioned above as any_name) so you may have to change the name manually in both the files.
 
 
 
-
-```
 
 
 
