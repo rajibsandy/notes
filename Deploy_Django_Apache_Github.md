@@ -111,9 +111,7 @@ Example:- git clone git@github.com:geekyshow1/miniblog.git
 ```
 Syntax:- sudo mv project_folder_name /var/www
 Example:- sudo mv miniblog /var/www
-```
-- Go to Your Project Directory
-``````
+
 Syntax:- cd /var/www/project_folder_name
 Example:- cd /var/www/miniblog
 ```
