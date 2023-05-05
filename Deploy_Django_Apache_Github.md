@@ -260,8 +260,6 @@ sudo usermod -a -G www-data ubuntu
 
 - If needed Deactivate Virtual env
 deactivate
-
-
 touch wsgi.py
 
 ```
@@ -292,7 +290,7 @@ touch wsgi.py
 ### Special Tip: If you face error "Name duplicates previous WSGI daemon definition" while installing SSL Certificate for your domain then comment below code then try to install SSL Certificate again and after successful installation un-comment it
 
 ```
-cd /etc/apache2/sites-available/your_domain.conf
+cd /etc/apache2/sites-available/rajibdev.tk.conf
 
 #WSGIDaemonProcess any_name python-home=/var/www/project_folder_name/myprojectenv python-path=/var/www/project_folder_name
 #WSGIProcessGroup any_name
