@@ -75,7 +75,7 @@ sudo service apache2 status
 - Generate SSH Keys
 
 ```
-ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen -t ed25519 -C "mnhodarajib@gmail.com"
 
 
 (If Permission Denied then Own .ssh then try again to Generate SSH Keys)
@@ -107,18 +107,17 @@ ssh -vT git@github.com
 
 ```
 Syntax:- git clone ssh_repo_path
-Example:- git clone git@github.com:geekyshow1/miniblog.git
-```
+Example:- git clone git@github.com:DevRajib/decorationBD.git
 
 
 ### Move Project Folder to Web Server public directory
 
 ```
 Syntax:- sudo mv project_folder_name /var/www
-Example:- sudo mv miniblog /var/www
+Example:- sudo mv decorationBD /var/www
 
 Syntax:- cd /var/www/project_folder_name
-Example:- cd /var/www/miniblog
+Example:- cd /var/www/decorationBD
 ```
 
 
@@ -145,32 +144,32 @@ pip install -r requirements.txt
 
 ```
 <VirtualHost *:80>
-    ServerName www.example.com
-    ServerAdmin contact@example.com
+    ServerName www.rajibdev.tk , rajibdev.tk
+    ServerAdmin contact@rajibdev.tk
     #Document Root is not required
-    #DocumentRoot /var/www/project_folder_name
+    #DocumentRoot /var/www/decorationBD
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
     
-    Alias /static /var/www/project_folder_name/static
-    <Directory /var/www/project_folder_name/static>
+    Alias /static /var/www/decorationBD/static
+    <Directory /var/www/decorationBD/static>
         Require all granted
     </Directory>
     
-    Alias /media /var/www/project_folder_name/media
-    <Directory /var/www/project_folder_name/media>
+    Alias /media /var/www/decorationBD/media
+    <Directory /var/www/decorationBD/media>
         Require all granted
     </Directory>
     
-    <Directory /var/www/project_folder_name/Inner_project_folder_name>
+    <Directory /var/www/decorationBD/shoppinglyx>
         <Files wsgi.py>
             Require all granted
         </Files>
     </Directory>
     
-    WSGIDaemonProcess any_name python-home=/var/www/project_folder_name/myprojectenv python-path=/var/www/project_folder_name
+    WSGIDaemonProcess any_name python-home=/var/www/decorationBD/env python-path=/var/www/decorationBD
     WSGIProcessGroup any_name
-    WSGIScriptAlias /  /var/www/project_folder_name/inner_project_folder_name/wsgi.py
+    WSGIScriptAlias /  /var/www/decorationBD/shoppinglyx/wsgi.py
 </VirtualHost>
 ```
 
@@ -189,10 +188,10 @@ sudo service apache2 restart
 ###Open Django Project settings.py
 
 ```
-cd /var/www/miniblog/miniblog
-sudo nano settings.py
+cd /var/www/decorationBD/shoppinglyx
+sudo vim settings.py
 Make below changes
-ALLOWED_HOST = ["your_domain"]
+ALLOWED_HOST = ["rajibdev.tk" , "www.rajibdev.tk"]
 DEBUG = False
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static'
@@ -226,7 +225,7 @@ Open apache2.conf
 Write below code in the bottom of apache2.conf file
 
 ```
-sudo nano apache2.conf
+sudo vim apache2.conf
 WSGIApplicationGroup %{GLOBAL}
 sudo service apache2 restart
 
@@ -235,7 +234,7 @@ sudo service apache2 restart
 Serve Static Files > Create Database Tables > Create Superuser
 
 ```
-cd /var/www/miniblog
+cd /var/www/decorationBD
 python manage.py collectstatic
 python manage.py makemigrations
 python manage.py migrate
@@ -249,11 +248,6 @@ python manage.py createsuperuser
 - Check Your User Group
 
 ```
-Syntax:- 
-sudo chown -R www-data:www-data database_folder
-sudo chmod 775 database_folder
-sudo chmod 664 database_folder/database_file
-
 Example:-
 sudo chown -R www-data:www-data mbdb
 sudo chmod 775 mbdb
@@ -261,12 +255,14 @@ sudo chmod 664 mbdb/db.sqlite3
 
 sudo chown -R www-data:www-data media
 
-
 sudo groups ubuntu
 sudo usermod -a -G www-data ubuntu
 
 - If needed Deactivate Virtual env
 deactivate
+
+
+touch wsgi.py
 
 ```
 
@@ -282,7 +278,10 @@ sudo service apache2 restart
 sudo service apache2 graceful
 // OR
 cd /var/www/miniblog/miniblog
+
+
 touch wsgi.py
+
 
 ```
 
