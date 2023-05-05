@@ -75,7 +75,8 @@ sudo service apache2 status
 - Make Connection between vpsr &  Github------ via SSH Key
 - Generate SSH Keys
 
-```ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
 - If Permission Denied then Own .ssh then try again to Generate SSH Keys
 
 Syntax:- sudo chown -R user_name .ssh
