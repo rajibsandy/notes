@@ -35,7 +35,7 @@ sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT
 sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 443 -j ACCEPT
 sudo netfilter-persistent save
 
-````
+```
 ### Note:- Commands for VPS Server 
 (Lets Verify all required softwares are installed or not , if not please Installed them one by one )
 
@@ -85,9 +85,11 @@ Example:- sudo chown -R ubuntu .ssh
 - Go to Your Github Repo-Click SETTING < DEPLOY KEYS < ADD DEPLOY KEYS and Paste Copied SSH Public Key then Click on ADD KEY.
 
 - Verify the Connection, Go to Your Server Terminal then run below
-```ssh -T git@github.com
+```
+ssh -T git@github.com
 // OR
-ssh -vT git@github.com```
+ssh -vT git@github.com
+```
 
 
 
@@ -109,21 +111,24 @@ Example:- git clone git@github.com:geekyshow1/miniblog.git
 ```
 Syntax:- sudo mv project_folder_name /var/www
 Example:- sudo mv miniblog /var/www
-
+```
 - Go to Your Project Directory
-
+``````
 Syntax:- cd /var/www/project_folder_name
 Example:- cd /var/www/miniblog
+```
 
-- Create Virtual env
+
+
+- Create Virtual env >  Activate Virtual env > Install Dependencies
+
+```
 Syntax:- virtualenv env_name
-Example:- virtualenv mb
+Example:- virtualenv env
 
-- Activate Virtual env
 Syntax:- source virtualenv_name/bin/activate
-Example:- source mb/bin/activate
+Example:- source env/bin/activate
 
-- Install Dependencies
 pip install -r requirements.txt
 
 ```
