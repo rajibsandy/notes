@@ -25,9 +25,11 @@ python --version
 apache2ctl -M
 pip --version
 git --version
+
+
+- python -c "import sqlite3; print(sqlite3.sqlite_version)"
   
 ```
-- python -c "import sqlite3; print(sqlite3.sqlite_version)"
 
 
 
