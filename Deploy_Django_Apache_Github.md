@@ -90,14 +90,13 @@ Example:- sudo chown -R ubuntu .ssh
 - Go to Your Github Repo-Click SETTING < DEPLOY KEYS < ADD DEPLOY KEYS and Paste Copied SSH Public Key then Click on ADD KEY.
 
 - Verify the Connection, Go to Your Server Terminal then run below
+
+
 ```
 ssh -T git@github.com
 // OR
 ssh -vT git@github.com
 ```
-
-
-
 
 ## Clone Project 
 
@@ -108,8 +107,7 @@ ssh -vT git@github.com
 ```
 Syntax:- git clone ssh_repo_path
 Example:- git clone git@github.com:DevRajib/decorationBD.git
-
-
+```
 ### Move Project Folder to Web Server public directory
 
 ```
@@ -137,7 +135,10 @@ pip install -r requirements.txt
 
 # Apache2 work
 ### Create Virtual Host File
-```nano /etc/apache2/sites-available/your_domain.conf```
+
+```
+vim /etc/apache2/sites-available/rajibdev.tk.conf
+```
 
 - Add Following Code in Virtual Host File
 
@@ -180,8 +181,7 @@ sudo apache2ctl configtest
 
 - Enable Virtual Host
 cd /etc/apache2/sites-available/
-sudo a2ensite your_domain.conf
-
+sudo a2ensite rajibdev.tk.conf
 sudo service apache2 restart
 
 ```
@@ -201,7 +201,10 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 
 - Restart Apache2
-```sudo service apache2 restart```
+```
+sudo service apache2 restart
+
+```
 
 
 - You can check error logs If you get any error:
