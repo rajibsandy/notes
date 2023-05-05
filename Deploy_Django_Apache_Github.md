@@ -5,6 +5,9 @@
 
 ```
 ssh ubuntu@140.238.241.74
+sudo apt update 
+sudo apt upgrade -y
+
 ```
 
 
