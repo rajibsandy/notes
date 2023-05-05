@@ -1,39 +1,36 @@
 
 # VPS 
-- For Oracal Cloud please use iptables
-
 
 ```
-ssh ubuntu@140.238.241.74
+ssh ubuntu@140.238.241.**
 sudo apt update 
 sudo apt upgrade -y
 
 ```
 
-
+- For Oracal Cloud please use iptables
 ```
-$ sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT
-$ sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 443 -j ACCEPT
-$ sudo netfilter-persistent save
+sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT
+sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 443 -j ACCEPT
+sudo netfilter-persistent save
 
 ````
-### Note:- Run Below Commands on Your Remote Server Linux Machine or VPS, Not on Your Local Windows Machine
-  - Verify that all required softwares are installed
-  
-  - If Required Softwares and Modules are not Installed then Install them:
+### Note:- Commands for VPS Server 
+(Lets Verify all required softwares are installed or not , if not please Installed them one by one )
+
   
 ```
-sudo apt install apache2
-sudo apt install python
-sudo apt install libapache2-mod-wsgi-py3
-sudo apt install python3-pip
-sudo apt install git
-
 apache2 -v
 python --version
 apache2ctl -M
 pip --version
 git --version
+
+sudo apt install apache2 -y
+sudo apt install python -y
+sudo apt install libapache2-mod-wsgi-py3
+sudo apt install python3-pip -y
+sudo apt install git -y
 
 - SQLite is Included with Python
   python -c "import sqlite3; print(sqlite3.sqlite_version)"
