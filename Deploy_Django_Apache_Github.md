@@ -15,10 +15,12 @@ DATABASES = {
 ```
 - Activate Your virtual Env >  Create requirements.txt 
 
-  ```
-  source env/bin/activate
-  pip freeze > requirements.txt
-  ```
+```
+source env/bin/activate
+pip freeze > requirements.txt
+python manage.py runserver
+
+```
   
 - Deactivate Virtual Env &  Push your Poject to You Github Account as Private Repo.To Access Remote Server via SSH
 
