@@ -112,10 +112,10 @@ Example:- git clone git@github.com:DevRajib/decorationBD.git
 
 ```
 Syntax:- sudo mv project_folder_name /var/www
-Example:- sudo mv decorationBD /var/www
+Example:- sudo mv shoppinglyx /var/www
 
 Syntax:- cd /var/www/project_folder_name
-Example:- cd /var/www/decorationBD
+Example:- cd /var/www/shoppinglyx
 ```
 
 
@@ -188,7 +188,7 @@ sudo service apache2 restart
 ###Open Django Project settings.py
 
 ```
-cd /var/www/decorationBD/shoppinglyx
+cd /var/www/shoppinglyx/shoppinglyx
 sudo vim settings.py
 Make below changes
 ALLOWED_HOST = ["rajibdev.tk" , "www.rajibdev.tk"]
@@ -237,7 +237,7 @@ sudo service apache2 restart
 Serve Static Files > Create Database Tables > Create Superuser
 
 ```
-cd /var/www/decorationBD
+cd /var/www/shoppinglyx
 python manage.py collectstatic
 python manage.py makemigrations
 python manage.py migrate
